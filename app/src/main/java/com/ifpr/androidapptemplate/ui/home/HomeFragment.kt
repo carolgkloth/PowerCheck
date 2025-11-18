@@ -76,8 +76,18 @@ class HomeFragment : Fragment() {
 
                         val imageView = itemView.findViewById<ImageView>(R.id.item_image)
                         val enderecoView = itemView.findViewById<TextView>(R.id.item_endereco)
+                        val tipoTreino = itemView.findViewById<TextView>(R.id.tipoTreinoEditText)
+                        val dataTreino = itemView.findViewById<TextView>(R.id.dataTreinoEditText)
+                        val recordTreino = itemView.findViewById<TextView>(R.id.recordTreinoEditText)
+                        val obsTreino = itemView.findViewById<TextView>(R.id.obsTreinoEditText)
 
                         enderecoView.text = "Endereço: ${item.endereco ?: "Não informado"}"
+                        tipoTreino.text = "Tipo de Treino: ${item.tipoTreinoEditText ?: "Não informado"}"
+                        dataTreino.text = "Data do Treino: ${item.dataTreinoEditText ?: "Não informado"}"
+                        recordTreino.text = "Record/Marca: ${item.tipoTreinoEditText ?: "Não informado"}"
+                        obsTreino.text = "Observações: ${item.obsTreinoEditText ?: "Não informado"}"
+
+
 
                         if (!item.imageUrl.isNullOrEmpty()) {
                             Glide.with(container.context).load(item.imageUrl).into(imageView)
